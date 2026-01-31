@@ -1,14 +1,9 @@
-# LoViF 2026 – All‑in‑One Image Restoration (Codabench #13251) – Starter Project
+# Image Restoration Project
 
 This is a **local, runnable starter kit** you can use to:
 - train an image‑restoration model on paired data (corrupted → clean),
 - run inference on a test folder, and
-- package predictions into a `submission.zip`.
 
-> ⚠️ Important: Codabench competitions sometimes require *specific* folder/file names for submissions.
-> This repo includes a flexible `submit.py` that mirrors the **common** “one output image per input image” format.
-> After you download the organizer’s *sample submission* (or view the “How to submit” page), you may need to
-> adjust just **two** config values: `submission.output_dir_name` and `submission.zip_name`.
 
 ## 1) Quickstart
 
