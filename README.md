@@ -1,6 +1,6 @@
 # Image Restoration Project
 
-This is a **local, runnable starter kit** you can use to:
+Start with:
 - train an image‑restoration model on paired data (corrupted → clean),
 - run inference on a test folder, and
 
