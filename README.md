@@ -1,9 +1,5 @@
 # Image Restoration Project
-
-Start with:
-- train an image‑restoration model on paired data (corrupted → clean),
-- run inference on a test folder, and
-
+This project is a local, end-to-end image restoration framework designed to train deep learning models on paired corrupted-to-clean images, perform inference on unseen degraded images, and generate restored outputs.
 
 ## 1) Quickstart
 
