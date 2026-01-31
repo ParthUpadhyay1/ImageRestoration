@@ -1,0 +1,28 @@
+cat > .gitignore <<'EOF'
+# venv
+.venv/
+venv/
+env/
+
+# data folders (exactly what you asked)
+data/
+src/data/
+
+# python junk
+__pycache__/
+*.py[cod]
+
+# optional (common)
+artifacts/
+outputs/
+runs/
+logs/
+checkpoints/
+
+# model files (optional but strongly recommended)
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.h5
+EOF

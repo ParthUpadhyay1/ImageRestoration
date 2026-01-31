@@ -1,0 +1,50 @@
+# Starter config for local training & submission packaging
+
+seed: 1337
+
+paths:
+  data_root: data
+  artifacts_root: artifacts
+
+data:
+  crop_size: 128     #256
+  batch_size: 4       #8
+  num_workers: 2      #4
+  normalize_01: true   # scale images to [0,1]
+  extensions: [".png", ".jpg", ".jpeg"]
+
+model:
+  name: nafnet_tiny
+  in_ch: 3
+  out_ch: 3
+  width: 32
+  enc_blocks: [2, 2, 4, 4]
+  dec_blocks: [2, 2, 2, 2]
+  middle_blocks: 4
+  dropout: 0.0
+
+train:
+  epochs: 1
+  lr: 2.0e-4
+  weight_decay: 0.0
+  grad_clip: 1.0
+  log_every: 50
+  amp: true
+  device: cuda
+
+loss:
+  l1_weight: 1.0
+  ssim_weight: 0.0   # set >0 to use SSIM loss (slower)
+
+predict:
+  save_format: "png"
+  save_dir: artifacts/predictions
+  device: cuda
+  use_best_checkpoint: true
+
+submission:
+  # Folder name inside the submission.zip (common patterns: "res", "results", "output")
+  output_dir_name: "results"
+  zip_name: "submission.zip"
+  # Where we look for predictions to zip (should match predict.save_dir/split)
+  predictions_dir: "artifacts/predictions/test"
